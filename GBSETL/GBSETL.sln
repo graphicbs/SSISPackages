@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1062
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "GBSETL", "GBSETL\GBSETL.dtproj", "{1CC5FC13-8667-47D3-A39C-802B2534C5A3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1CC5FC13-8667-47D3-A39C-802B2534C5A3}.Development|Default.ActiveCfg = Development
+		{1CC5FC13-8667-47D3-A39C-802B2534C5A3}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {73D1BCFA-2EF7-46E0-A82B-BFD4E9E3836B}
+	EndGlobalSection
+EndGlobal

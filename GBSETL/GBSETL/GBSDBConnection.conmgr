@@ -1,0 +1,18 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="GBSDBConnection"
+  DTS:DTSID="{431AFC48-7A05-4D25-A1E8-085DE33EC335}"
+  DTS:CreationName="OLEDB">
+  <DTS:PropertyExpression
+    DTS:Name="Password">@[$Project::GBSAdminPW]</DTS:PropertyExpression>
+  <DTS:PropertyExpression
+    DTS:Name="ServerName">@[$Project::ServerName]</DTS:PropertyExpression>
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=Oldstone;User ID=GBSAdmin;Initial Catalog=GBSDB;Provider=SQLNCLI11.1;Auto Translate=False;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAh95Zu74DBES5E0jMo2COWwAAAAACAAAAAAADZgAAwAAAABAAAABWv4tZ731Ac94ia9AUqO3tAAAAAASAAACgAAAAEAAAAET5N1CU5BJcbXf7gUwFphGQAAAAR9y4h+kX3t2BtKIiVh9ZKBao0jZAtlhMSDOJ6SVqkzSULF7C6mEloHGS3suYd+0mFoxxX5Lvi6aMYrQqAIdlRN74TAC/Ar30iHhp3YWtH8DdgkmeroztOVArfQKQ0WMMrgKcXj3sH43Ih1VI3ZlyYnBl1TRZp++JA4SSUvUGq8YzQz7e/S23/RKjmKK8K19WFAAAAMHZ1JP5XD/cqrfiyh2hurOzAqAz</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
