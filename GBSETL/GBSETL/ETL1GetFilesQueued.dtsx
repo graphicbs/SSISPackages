@@ -11,8 +11,9 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="ETL1GetFilesQueued"
   DTS:PackageType="5"
-  DTS:VersionBuild="45"
-  DTS:VersionGUID="{E20A5F4B-45FC-4E97-963D-862C6F376851}">
+  DTS:ProtectionLevel="2"
+  DTS:VersionBuild="48"
+  DTS:VersionGUID="{535777C0-C74F-41CC-AA8B-1C1CAA96AAF3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:LogProviders>
@@ -94,7 +95,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="QueueFileName">
       <DTS:VariableValue
-        DTS:DataType="8">C:\GBSAutomation\ETL1Queue\0~myfile.xlsx</DTS:VariableValue>
+        DTS:DataType="8">C:\GBSAutomation\ETL\ETL1Queue\0~myfile.xlsx</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -680,13 +681,13 @@
       </DTS:LoggingOptions>
       <DTS:Executables>
         <DTS:Executable
-          DTS:refId="Package\ForEach ETL\Find Matching Files"
+          DTS:refId="Package\ForEach ETL\Find Matching Files at source"
           DTS:CreationName="STOCK:FOREACHLOOP"
           DTS:Description="Foreach Loop Container"
           DTS:DTSID="{B2774BC2-E02F-451A-A5F2-8EF538EC592E}"
           DTS:ExecutableType="STOCK:FOREACHLOOP"
           DTS:LocaleID="-1"
-          DTS:ObjectName="Find Matching Files">
+          DTS:ObjectName="Find Matching Files at source">
           <DTS:ForEachEnumerator
             DTS:CreationName="Microsoft.ForEachFileEnumerator"
             DTS:DTSID="{E47E0CC5-7C41-4710-AD33-74801AA3ACF0}"
@@ -931,7 +932,7 @@
           </DTS:LoggingOptions>
           <DTS:Executables>
             <DTS:Executable
-              DTS:refId="Package\ForEach ETL\Find Matching Files\Move File to Queue"
+              DTS:refId="Package\ForEach ETL\Find Matching Files at source\Move File to Queue"
               DTS:CreationName="Microsoft.FileSystemTask"
               DTS:Description="File System Task"
               DTS:DTSID="{800A6B6B-CFA8-4678-95C2-0E972AA37656}"
@@ -1504,7 +1505,7 @@
           DTS:From="Package\ForEach ETL\Get ETLID details"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint"
-          DTS:To="Package\ForEach ETL\Find Matching Files" />
+          DTS:To="Package\ForEach ETL\Find Matching Files at source" />
       </DTS:PrecedenceConstraints>
       <DTS:ForEachVariableMappings>
         <DTS:ForEachVariableMapping
@@ -1516,13 +1517,13 @@
       </DTS:ForEachVariableMappings>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Get ETLs"
+      DTS:refId="Package\Get list of ETLs"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Get ETLs"
       DTS:DTSID="{94924A84-B17A-447A-8FEE-E3C834DCF8AB}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Get ETLs"
+      DTS:ObjectName="Get list of ETLs"
       DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:LoggingOptions
@@ -1783,7 +1784,7 @@
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
       DTS:DTSID="{E352EC56-DC90-4A31-9F3F-B7B26C5DDFEC}"
-      DTS:From="Package\Get ETLs"
+      DTS:From="Package\Get list of ETLs"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
       DTS:To="Package\ForEach ETL" />
@@ -1802,14 +1803,14 @@
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="170,42"
-          Id="Package\ForEach ETL\Find Matching Files\Move File to Queue"
+          Id="Package\ForEach ETL\Find Matching Files at source\Move File to Queue"
           TopLeft="17,16" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="318,180"
-          Size="318,223"
-          Id="Package\ForEach ETL\Find Matching Files"
+          PanelSize="240,107"
+          Size="240,150"
+          Id="Package\ForEach ETL\Find Matching Files at source"
           TopLeft="20,91" />
         <NodeLayout
           Size="161,42"
@@ -1821,9 +1822,9 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="80.5,26"
+              EndConnector="41.5,26"
               Start="0,0"
-              End="80.5,18.5">
+              End="41.5,18.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -1834,13 +1835,13 @@
                     Point2="0,13"
                     Point3="4,13" />
                   <mssgle:LineSegment
-                    End="76.5,13" />
+                    End="37.5,13" />
                   <mssgle:CubicBezierSegment
-                    Point1="76.5,13"
-                    Point2="80.5,13"
-                    Point3="80.5,17" />
+                    Point1="37.5,13"
+                    Point2="41.5,13"
+                    Point3="41.5,17" />
                   <mssgle:LineSegment
-                    End="80.5,18.5" />
+                    End="41.5,18.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1852,40 +1853,40 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="622,369"
-          Size="622,412"
+          PanelSize="594,296"
+          Size="594,339"
           Id="Package\ForEach ETL"
           TopLeft="67,153" />
         <NodeLayout
-          Size="121,42"
-          Id="Package\Get ETLs"
-          TopLeft="69,26" />
+          Size="150,42"
+          Id="Package\Get list of ETLs"
+          TopLeft="67,35" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="129.5,68">
+          TopLeft="142,77">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="248.5,85"
+              EndConnector="222,76"
               Start="0,0"
-              End="248.5,77.5">
+              End="222,68.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,38.5" />
+                    End="0,34" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,38.5"
-                    Point2="0,42.5"
-                    Point3="4,42.5" />
+                    Point1="0,34"
+                    Point2="0,38"
+                    Point3="4,38" />
                   <mssgle:LineSegment
-                    End="244.5,42.5" />
+                    End="218,38" />
                   <mssgle:CubicBezierSegment
-                    Point1="244.5,42.5"
-                    Point2="248.5,42.5"
-                    Point3="248.5,46.5" />
+                    Point1="218,38"
+                    Point2="222,38"
+                    Point3="222,42" />
                   <mssgle:LineSegment
-                    End="248.5,77.5" />
+                    End="222,68.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

@@ -12,11 +12,11 @@
   <DataSourceViews />
   <DeploymentModelSpecificContent>
     <Manifest>
-      <SSIS:Project SSIS:ProtectionLevel="EncryptSensitiveWithUserKey" xmlns:SSIS="www.microsoft.com/SqlServer/SSIS">
+      <SSIS:Project SSIS:ProtectionLevel="EncryptSensitiveWithPassword" xmlns:SSIS="www.microsoft.com/SqlServer/SSIS">
         <SSIS:Properties>
           <SSIS:Property SSIS:Name="ID">{cda3e8bb-d60a-4dfe-bbc1-5045910402dd}</SSIS:Property>
           <SSIS:Property SSIS:Name="Name">GBSETL</SSIS:Property>
-          <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+          <SSIS:Property SSIS:Name="VersionMajor">0</SSIS:Property>
           <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
           <SSIS:Property SSIS:Name="VersionBuild">0</SSIS:Property>
           <SSIS:Property SSIS:Name="VersionComments">
@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">GBS-LT51</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAh95Zu74DBES5E0jMo2COWwAAAAACAAAAAAADZgAAwAAAABAAAAAh/2IajICjtJnmHnFmsA29AAAAAASAAACgAAAAEAAAAN4Q278GW0OZjmb/GI3KsRqIAAAAWQ9P0/CUW8TjL98rhzXRDlthdsnI3WGG5zamsUNyum8SlOJ9sOaI82VOSqtOEpOxhDB/6JOZrdn1zg8XrFQWJFtDOawfxrVJ1KU8+7y7MgDM5rMdTG4dMyW/SD4KUOPJoEp2JUu+KcRIn5eifGiLp3mlibUr3jiJpr2sDlRmdG/QMNMx90FaqBQAAAAchSfSRrVcUXnGFT1I2/KUwXxIMg==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1" SSIS:Salt="qkMIT26Uj8U=" SSIS:IV="Ja8VSNloJF748+QRxEmdqw==" SSIS:Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc">NWmjnJpiPxf/T51ncer+C6/MyiJp/+xS0ouFoftJQEgNrYTboCqx40DR3ZI8SzpdwlTjLOJTe4gszXlkM7PIqQ0tEf8tsvBqSgCRQ9Y+XeTrsTGh4XBvShbut/oJzUeMnapaDJ8N94cuXSTUfXT2N5I1v+HJYsu+hqprh90yIj1PCybgE/5/b+5t+hB4TlR+</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -113,21 +113,6 @@
                 <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.GBSDBConnection.UserName">
-              <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="CreationName">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="Description">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">GBSAdmin</SSIS:Property>
-                <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
-              </SSIS:Properties>
-            </SSIS:Parameter>
           </SSIS:ProjectConnectionParameters>
           <SSIS:PackageInfo>
             <SSIS:PackageMetaData SSIS:Name="ETL2ExtractFilesToDB.dtsx">
@@ -136,14 +121,14 @@
                 <SSIS:Property SSIS:Name="Name">ETL2ExtractFilesToDB</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">47</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">71</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{A67600C8-6E61-4685-82E5-1B6832AFF1C6}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{7035FE5C-EFCA-44F7-8D78-FCF81A4DE864}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">2</SSIS:Property>
               </SSIS:Properties>
               <SSIS:Parameters>
                 <SSIS:Parameter SSIS:Name="CM.TF Excel Connection.TargetServerVersion">
@@ -157,7 +142,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">140</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">150</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">9</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -169,14 +154,14 @@
                 <SSIS:Property SSIS:Name="Name">ETL1GetFilesQueued</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">45</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">47</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{E20A5F4B-45FC-4E97-963D-862C6F376851}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{98C032DB-B706-432A-8D77-149507B7CCEF}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">2</SSIS:Property>
               </SSIS:Properties>
               <SSIS:Parameters />
             </SSIS:PackageMetaData>

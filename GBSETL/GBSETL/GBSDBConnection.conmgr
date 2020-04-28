@@ -4,15 +4,20 @@
   DTS:DTSID="{431AFC48-7A05-4D25-A1E8-085DE33EC335}"
   DTS:CreationName="OLEDB">
   <DTS:PropertyExpression
-    DTS:Name="Password">@[$Project::GBSAdminPW]</DTS:PropertyExpression>
+    DTS:Name="Password">@[$Project::SQLUserPW]</DTS:PropertyExpression>
   <DTS:PropertyExpression
     DTS:Name="ServerName">@[$Project::ServerName]</DTS:PropertyExpression>
+  <DTS:PropertyExpression
+    DTS:Name="UserName">@[$Project::SQLUserName]</DTS:PropertyExpression>
   <DTS:ObjectData>
     <DTS:ConnectionManager
-      DTS:ConnectionString="Data Source=Oldstone;User ID=GBSAdmin;Initial Catalog=GBSDB;Provider=SQLNCLI11.1;Auto Translate=False;">
+      DTS:ConnectionString="Data Source=Oldstone;User ID=ETLAdmin;Initial Catalog=GBSDB;Provider=SQLNCLI11.1;Auto Translate=False;">
       <DTS:Password
         DTS:Name="Password"
-        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAh95Zu74DBES5E0jMo2COWwAAAAACAAAAAAADZgAAwAAAABAAAABWv4tZ731Ac94ia9AUqO3tAAAAAASAAACgAAAAEAAAAET5N1CU5BJcbXf7gUwFphGQAAAAR9y4h+kX3t2BtKIiVh9ZKBao0jZAtlhMSDOJ6SVqkzSULF7C6mEloHGS3suYd+0mFoxxX5Lvi6aMYrQqAIdlRN74TAC/Ar30iHhp3YWtH8DdgkmeroztOVArfQKQ0WMMrgKcXj3sH43Ih1VI3ZlyYnBl1TRZp++JA4SSUvUGq8YzQz7e/S23/RKjmKK8K19WFAAAAMHZ1JP5XD/cqrfiyh2hurOzAqAz</DTS:Password>
+        Sensitive="1"
+        p4:Salt="QTG3LmifSz0="
+        p4:IV="IsNgLe9LzYn6pWzM3D72lA=="
+        p4:Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" xmlns:p4="www.microsoft.com/SqlServer/SSIS">l4xkQDCc6GyqA7eDx96bzeXUfHgQadOtjo5Uc4FahgusjBV1MH8X06Ts+HyQwvIg4/XV/B1C9bDTP7xAX8sK/bmy3hL/BDSBYfCBy8/1HGEVKMse2oYROsJRUp4dvZmpf0DjXC40tA8i7qDDU2uvqYGcJ/gICHFkzI2ZeeJMdP8BiDCD2AMU+XlFg68lxky7/6xJlm7lw92HGv4ETzBMgw==</DTS:Password>
     </DTS:ConnectionManager>
   </DTS:ObjectData>
 </DTS:ConnectionManager>

@@ -106,7 +106,7 @@
     </SSIS:Properties>
   </SSIS:Parameter>
   <SSIS:Parameter
-    SSIS:Name="GBSAdminPW">
+    SSIS:Name="SQLUserPW">
     <SSIS:Properties>
       <SSIS:Property
         SSIS:Name="ID">{7fe39a4e-28d2-4728-8d3e-e471e0e36152}</SSIS:Property>
@@ -117,11 +117,36 @@
       <SSIS:Property
         SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
       <SSIS:Property
-        SSIS:Name="Required">0</SSIS:Property>
+        SSIS:Name="Required">1</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Sensitive">1</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Value"
+        SSIS:Sensitive="1"
+        SSIS:Salt="pZPHYgfWl9s="
+        SSIS:IV="dQmTV8MydICIzqRbVwWOUA=="
+        SSIS:Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc">Zi9OkrNaYJ6azD3o8U+u9cFh7SR7ElKUtOuwbvtyVHBy5aUQ043lJZQhjRVEwRTYOfkn1QqIGEK+mYYLzlHjnrKJQh7k+h9WRtAIKvOySsVJMimWQSlGxVdK5NU0WzIskTYRpPLhqALVnw0j1JHPwzq/jBqIpOdqnvauGiI3NH39G1VP3Nw3PXS6/3CtucjP7H+eEsv6/djYTuENuMGAQg==</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="DataType">18</SSIS:Property>
+    </SSIS:Properties>
+  </SSIS:Parameter>
+  <SSIS:Parameter
+    SSIS:Name="SQLUserName">
+    <SSIS:Properties>
+      <SSIS:Property
+        SSIS:Name="ID">{509d69ab-f11b-4b44-92eb-b55a2b93d968}</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="CreationName"></SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Description"></SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Required">1</SSIS:Property>
       <SSIS:Property
         SSIS:Name="Sensitive">0</SSIS:Property>
       <SSIS:Property
-        SSIS:Name="Value">DBE65FE0-B5E5-4528-AF4E-16B4C04A42EE</SSIS:Property>
+        SSIS:Name="Value">ETLAdmin</SSIS:Property>
       <SSIS:Property
         SSIS:Name="DataType">18</SSIS:Property>
     </SSIS:Properties>

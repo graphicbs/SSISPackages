@@ -11,8 +11,9 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="ETL2ExtractFilesToDB"
   DTS:PackageType="5"
-  DTS:VersionBuild="61"
-  DTS:VersionGUID="{62A4F10D-8259-4F9D-BB49-D391EB3E54E5}">
+  DTS:ProtectionLevel="2"
+  DTS:VersionBuild="71"
+  DTS:VersionGUID="{7035FE5C-EFCA-44F7-8D78-FCF81A4DE864}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -302,6 +303,8 @@
           DTS:ObjectName="Add ETLHistory record"
           DTS:ThreadHint="0">
           <DTS:Variables />
+          <DTS:LoggingOptions
+            DTS:FilterKind="0" />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{431AFC48-7A05-4D25-A1E8-085DE33EC335}"
@@ -349,6 +352,8 @@
           DTS:ObjectName="DynamicLoadDataToDB"
           DTS:ThreadHint="1">
           <DTS:Variables />
+          <DTS:LoggingOptions
+            DTS:FilterKind="0" />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{431AFC48-7A05-4D25-A1E8-085DE33EC335}"
@@ -462,6 +467,67 @@
           DTS:ObjectName="Move Excel File to Completed"
           DTS:ThreadHint="0">
           <DTS:Variables />
+          <DTS:LoggingOptions
+            DTS:FilterKind="0"
+            DTS:LoggingMode="1">
+            <DTS:Property
+              DTS:DataType="8"
+              DTS:Name="EventFilter">3,7,OnError,13,OnInformation,9,OnWarning</DTS:Property>
+            <DTS:Property
+              DTS:EventName="OnError"
+              DTS:Name="ColumnFilter">
+              <DTS:Property
+                DTS:Name="Computer">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="Operator">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="SourceName">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="SourceID">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="ExecutionID">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="MessageText">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="DataBytes">-1</DTS:Property>
+            </DTS:Property>
+            <DTS:Property
+              DTS:EventName="OnInformation"
+              DTS:Name="ColumnFilter">
+              <DTS:Property
+                DTS:Name="Computer">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="Operator">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="SourceName">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="SourceID">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="ExecutionID">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="MessageText">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="DataBytes">-1</DTS:Property>
+            </DTS:Property>
+            <DTS:Property
+              DTS:EventName="OnWarning"
+              DTS:Name="ColumnFilter">
+              <DTS:Property
+                DTS:Name="Computer">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="Operator">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="SourceName">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="SourceID">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="ExecutionID">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="MessageText">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="DataBytes">-1</DTS:Property>
+            </DTS:Property>
+          </DTS:LoggingOptions>
           <DTS:ObjectData>
             <FileSystemData
               TaskOperationType="MoveFile"
@@ -482,9 +548,71 @@
           DTS:ObjectName="Move File to Completed"
           DTS:ThreadHint="1">
           <DTS:Variables />
+          <DTS:LoggingOptions
+            DTS:FilterKind="0"
+            DTS:LoggingMode="1">
+            <DTS:Property
+              DTS:DataType="8"
+              DTS:Name="EventFilter">3,7,OnError,13,OnInformation,9,OnWarning</DTS:Property>
+            <DTS:Property
+              DTS:EventName="OnError"
+              DTS:Name="ColumnFilter">
+              <DTS:Property
+                DTS:Name="Computer">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="Operator">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="SourceName">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="SourceID">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="ExecutionID">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="MessageText">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="DataBytes">-1</DTS:Property>
+            </DTS:Property>
+            <DTS:Property
+              DTS:EventName="OnInformation"
+              DTS:Name="ColumnFilter">
+              <DTS:Property
+                DTS:Name="Computer">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="Operator">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="SourceName">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="SourceID">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="ExecutionID">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="MessageText">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="DataBytes">-1</DTS:Property>
+            </DTS:Property>
+            <DTS:Property
+              DTS:EventName="OnWarning"
+              DTS:Name="ColumnFilter">
+              <DTS:Property
+                DTS:Name="Computer">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="Operator">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="SourceName">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="SourceID">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="ExecutionID">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="MessageText">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="DataBytes">-1</DTS:Property>
+            </DTS:Property>
+          </DTS:LoggingOptions>
           <DTS:ObjectData>
             <FileSystemData
               TaskOperationType="MoveFile"
+              TaskOverwriteDestFile="True"
               TaskSourcePath="User::FileNameToLoad"
               TaskIsSourceVariable="True"
               TaskDestinationPath="$Project::CompletedFolder"
@@ -586,6 +714,71 @@
           DTS:ObjectName="Save Excel as Text"
           DTS:ThreadHint="0">
           <DTS:Variables />
+          <DTS:LoggingOptions
+            DTS:FilterKind="0"
+            DTS:LoggingMode="1">
+            <DTS:Property
+              DTS:DataType="8"
+              DTS:Name="EventFilter">3,7,OnError,13,OnInformation,9,OnWarning</DTS:Property>
+            <DTS:Property
+              DTS:EventName="OnError"
+              DTS:Name="ColumnFilter">
+              <DTS:Property
+                DTS:Name="Computer">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="Operator">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="SourceName">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="SourceID">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="ExecutionID">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="MessageText">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="DataBytes">-1</DTS:Property>
+            </DTS:Property>
+            <DTS:Property
+              DTS:EventName="OnInformation"
+              DTS:Name="ColumnFilter">
+              <DTS:Property
+                DTS:Name="Computer">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="Operator">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="SourceName">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="SourceID">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="ExecutionID">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="MessageText">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="DataBytes">-1</DTS:Property>
+            </DTS:Property>
+            <DTS:Property
+              DTS:EventName="OnWarning"
+              DTS:Name="ColumnFilter">
+              <DTS:Property
+                DTS:Name="Computer">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="Operator">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="SourceName">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="SourceID">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="ExecutionID">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="MessageText">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="DataBytes">-1</DTS:Property>
+            </DTS:Property>
+            <DTS:SelectedLogProviders>
+              <DTS:SelectedLogProvider
+                DTS:InstanceID="{DE7DCCF9-E236-41E8-B9FF-605011C5FA27}" />
+            </DTS:SelectedLogProviders>
+          </DTS:LoggingOptions>
           <DTS:ObjectData>
             <ScriptProject
               Name="ST_43459d1265b24ffd85c09321aa49cda8"
@@ -924,43 +1117,51 @@ namespace ST_43459d1265b24ffd85c09321aa49cda8
 		public void Main()
 		{
             // TODO: Add your code here
- 
 
-            string mCurrentFolder = Dts.Variables["$Project::CurrentFolder"].Value.ToString();
-            string mFileName2 = Dts.Variables["User::FileName2"].Value.ToString();
-
-            string ConnString;
-            ConnString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + mCurrentFolder + "\\" + mFileName2
-                           + ";Extended Properties=\"Excel 12.0;HDR=No;IMEX=1\";";
-            var conn = new OleDbConnection(ConnString);
-            conn.Open();
-            string query = "SELECT * FROM [Sheet1$]";
-            var command = new OleDbCommand(query, conn);
-            OleDbDataAdapter adap = new OleDbDataAdapter(command);
-            var datatable = new DataTable();
-            adap.Fill(datatable);
-
-
-            //Create csv File
-            string CSVFilePath = mCurrentFolder + "\\" + mFileName2 + ".CSV";
-            using (var sw = new StreamWriter(CSVFilePath))
+            try
             {
-                for (int row = 0; row < datatable.Rows.Count; row++)
+                string mCurrentFolder = Dts.Variables["$Project::CurrentFolder"].Value.ToString();
+                string mFileName2 = Dts.Variables["User::FileName2"].Value.ToString();
+
+                string ConnString;
+                ConnString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + mCurrentFolder + "\\" + mFileName2
+                               + ";Extended Properties=\"Excel 12.0;HDR=No;IMEX=1\";";
+                var conn = new OleDbConnection(ConnString);
+                conn.Open();
+                string query = "SELECT * FROM [Sheet1$]";
+                var command = new OleDbCommand(query, conn);
+                OleDbDataAdapter adap = new OleDbDataAdapter(command);
+                var datatable = new DataTable();
+                adap.Fill(datatable);
+
+
+                //Create csv File
+                string CSVFilePath = mCurrentFolder + "\\" + mFileName2 + ".CSV";
+                using (var sw = new StreamWriter(CSVFilePath))
                 {
-                    var strRow = "";
-
-                    for (int col = 0; col < datatable.Columns.Count; col++)
+                    for (int row = 0; row < datatable.Rows.Count; row++)
                     {
-                        strRow += "\"" + datatable.Rows[row][col].ToString() + "\",";
+                        var strRow = "";
 
+                        for (int col = 0; col < datatable.Columns.Count; col++)
+                        {
+                            strRow += "\"" + datatable.Rows[row][col].ToString() + "\",";
+
+                        }
+                        //remove last , from row
+                        strRow = strRow.Remove(strRow.Length - 1);
+                        //write row to file
+                        sw.WriteLine(strRow);
                     }
-                    //remove last , from row
-                    strRow = strRow.Remove(strRow.Length - 1);
-                    //write row to file
-                    sw.WriteLine(strRow);
                 }
+                conn.Close();
             }
-            conn.Close();
+            catch (Exception ex)
+            {
+                //An error occurred.  
+                Dts.Events.FireError(0, "Script Task Error", ex.Message + "\r" + ex.StackTrace, String.Empty, 0);
+                Dts.TaskResult = (int)ScriptResults.Failure;
+            }
 
             //UPDATE THE 2 VARIABLE NAMES, EXCEL VS TOLOAD
             //Dts.Variables["User::FileNameExcel"].Value = mCurrentFolder + "\\" + mFileName2;
@@ -993,7 +1194,7 @@ namespace ST_43459d1265b24ffd85c09321aa49cda8
     <msb:CodeName>ST_43459d1265b24ffd85c09321aa49cda8</msb:CodeName>
     <msb:Language>msBuild</msb:Language>
     <msb:DisplayName>ST_43459d1265b24ffd85c09321aa49cda8</msb:DisplayName>
-    <msb:ProjectId>{5135E037-C240-439E-A0DD-60532DBC057A}</msb:ProjectId>
+    <msb:ProjectId>{5DAE1583-C5CE-456E-AB5A-8ADE81720240}</msb:ProjectId>
   </msb:PropertyGroup>
   <msb:ItemGroup>
     <msb:Project Include="ST_43459d1265b24ffd85c09321aa49cda8.csproj" />
@@ -1115,113 +1316,113 @@ namespace ST_43459d1265b24ffd85c09321aa49cda8.Properties {
               <BinaryItem
                 Name="ST_43459d1265b24ffd85c09321aa49cda8.dll">TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
-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
+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
-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
+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
-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
+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
-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
+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
-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
-BQoA3QO0AxYACAbmABYArQDmAAYAgwM7BA4AyQTWBA4AhgBrAA4AIQVrAA4AJAXWBA4AtARfAA4A
-gQZfAA4AnwRfAA4AYQFfAAYAFgUuAAYAtgA7BAYAEAE7BAYAwgA7BAYAjQaNBAAAAAAlAAAAAAAB
-AAEAAQAQAFgEAQA5AAEAAQAAABAAeQXVBVEAAQADAAABEAASBtUFZQADAAcAAwEAADcGAABJAAQA
-CgARAEcEtwARADUBuwARAJMAvwAGBlcAwwBWgCcGxgBWgBUBxgBQIAAAAACGAF4EBgABALwhAAAA
-AIYYMgUGAAEAxCEAAAAAgxgyBQYAAQDMIQAAAACTCPUEygABAPghAAAAAJMIHQHPAAEA/yEAAAAA
-kwgpAdQAAQAHIgAAAACWCFwG2gACAA4iAAAAAIYYMgUGAAIAFiIAAAAAkRg4Bd8AAgAAAAEAWgMJ
-ADIFAQARADIFBgAZADIFCgApADIFEAAxADIFEAA5ADIFEABBADIFEABJADIFEABRADIFEABZADIF
-EABhADIFEABpADIFBgCZADIFBgDBADIFFQDRADIFBgBxAC8GKQDZAAQGLgDhADIEMwDpAFADOQCh
-AIEDPQDxAE4GQQB5ADIFEAD5AFMEBgABATIFRwAJATIFTgCBADIFBgARAS0EVQDxAE4GWwCJADIF
-EACBAEUGYwAZATIEaQAhATIEcACBABsGdQAxAXcGewDxAIoDewDxAGADfwA5AQYBEABBAZoBBgD5
-AJQBBgDZAGgGAQBxADIFBgChADIFBgBJAdQAhABJAYkGjQCpADIFkwDJADIFBgAIABQArQAIABgA
-sgApAHMAGgEuAAsA8gAuABMA+wAuABsAGgEuACMAIwEuACsATAEuADMATAEuADsATAEuAEMAIwEu
-AEsAUgEuAFMATAEuAFsAaQFDAGMAsgBJAHMAGgFhAHsAsgBjAGsAsgAbAAMAAQAEAAMAAAD5BOMA
-AAA9AegAAABgBu0AAgAEAAMAAgAFAAUAAQAGAAUAAgAHAAcABIAAAAEAAAD6HARWAAAAAAAAAQAA
-AAQAAAAAAAAAAAAAAJsAfQAAAAAADgAAAAAAAAAAAAAApACVAwAAAAAEAAAAAAAAAAAAAACbAF8A
-AAAAAAQAAAAAAAAAAAAAAJsAOwQAAAAADgAAAAAAAAAAAAAApAA4AAAAAAAAAAAAAQAAAIMFAAAF
-AAIAAAAAAABTVF80MzQ1OWQxMjY1YjI0ZmZkODVjMDkzMjFhYTQ5Y2RhOAA8TW9kdWxlPgBTeXN0
-ZW0uSU8ATWljcm9zb2Z0LlNxbFNlcnZlci5NYW5hZ2VkRFRTAHZhbHVlX18AU3lzdGVtLkRhdGEA
-U3lzdGVtLkRhdGEuT2xlRGIAbXNjb3JsaWIAT2xlRGJDb21tYW5kAGRlZmF1bHRJbnN0YW5jZQBE
-YXRhVGFibGUAVmFyaWFibGUASURpc3Bvc2FibGUAUnVudGltZVR5cGVIYW5kbGUAR2V0VHlwZUZy
-b21IYW5kbGUATWljcm9zb2Z0LlNxbFNlcnZlci5EdHMuUnVudGltZQBXcml0ZUxpbmUAVHlwZQBG
-YWlsdXJlAGdldF9DdWx0dXJlAHNldF9DdWx0dXJlAHJlc291cmNlQ3VsdHVyZQBWU1RBUlRTY3Jp
-cHRPYmplY3RNb2RlbEJhc2UASW50ZXJuYWxEYXRhQ29sbGVjdGlvbkJhc2UAQXBwbGljYXRpb25T
-ZXR0aW5nc0Jhc2UAQ2xvc2UARGlzcG9zZQBFZGl0b3JCcm93c2FibGVTdGF0ZQBDb21waWxlckdl
-bmVyYXRlZEF0dHJpYnV0ZQBEZWJ1Z2dlck5vblVzZXJDb2RlQXR0cmlidXRlAERlYnVnZ2FibGVB
-dHRyaWJ1dGUARWRpdG9yQnJvd3NhYmxlQXR0cmlidXRlAEFzc2VtYmx5VGl0bGVBdHRyaWJ1dGUA
-QXNzZW1ibHlUcmFkZW1hcmtBdHRyaWJ1dGUAVGFyZ2V0RnJhbWV3b3JrQXR0cmlidXRlAEFzc2Vt
-Ymx5Q29uZmlndXJhdGlvbkF0dHJpYnV0ZQBBc3NlbWJseURlc2NyaXB0aW9uQXR0cmlidXRlAENv
-bXBpbGF0aW9uUmVsYXhhdGlvbnNBdHRyaWJ1dGUAQXNzZW1ibHlQcm9kdWN0QXR0cmlidXRlAEFz
-c2VtYmx5Q29weXJpZ2h0QXR0cmlidXRlAFNTSVNTY3JpcHRUYXNrRW50cnlQb2ludEF0dHJpYnV0
-ZQBBc3NlbWJseUNvbXBhbnlBdHRyaWJ1dGUAUnVudGltZUNvbXBhdGliaWxpdHlBdHRyaWJ1dGUA
-Z2V0X1ZhbHVlAHZhbHVlAFJlbW92ZQBTeXN0ZW0uUnVudGltZS5WZXJzaW9uaW5nAFRvU3RyaW5n
-AGdldF9MZW5ndGgATWljcm9zb2Z0LlNxbFNlcnZlci5TY3JpcHRUYXNrAE1pY3Jvc29mdC5TcWxT
-ZXJ2ZXIuRHRzLlRhc2tzLlNjcmlwdFRhc2sAU2NyaXB0T2JqZWN0TW9kZWwAU3lzdGVtLkNvbXBv
-bmVudE1vZGVsAFNUXzQzNDU5ZDEyNjViMjRmZmQ4NWMwOTMyMWFhNDljZGE4LmRsbABGaWxsAGdl
-dF9JdGVtAFN5c3RlbQBFbnVtAHJlc291cmNlTWFuAE9wZW4AU2NyaXB0TWFpbgBTeXN0ZW0uQ29u
-ZmlndXJhdGlvbgBTeXN0ZW0uR2xvYmFsaXphdGlvbgBTeXN0ZW0uUmVmbGVjdGlvbgBEYXRhQ29s
-dW1uQ29sbGVjdGlvbgBEYXRhUm93Q29sbGVjdGlvbgBPbGVEYkNvbm5lY3Rpb24AU3lzdGVtLkRh
-dGEuQ29tbW9uAEN1bHR1cmVJbmZvAGdldF9SZXNvdXJjZU1hbmFnZXIAU3RyZWFtV3JpdGVyAFRl
-eHRXcml0ZXIAT2xlRGJEYXRhQWRhcHRlcgAuY3RvcgAuY2N0b3IAU3lzdGVtLkRpYWdub3N0aWNz
-AFN5c3RlbS5SdW50aW1lLkNvbXBpbGVyU2VydmljZXMAU3lzdGVtLlJlc291cmNlcwBTVF80MzQ1
-OWQxMjY1YjI0ZmZkODVjMDkzMjFhYTQ5Y2RhOC5Qcm9wZXJ0aWVzLlJlc291cmNlcy5yZXNvdXJj
-ZXMARGVidWdnaW5nTW9kZXMAU1RfNDM0NTlkMTI2NWIyNGZmZDg1YzA5MzIxYWE0OWNkYTguUHJv
-cGVydGllcwBnZXRfVmFyaWFibGVzAFNldHRpbmdzAGdldF9Db2x1bW5zAFN1Y2Nlc3MAZ2V0X0R0
-cwBTY3JpcHRSZXN1bHRzAGdldF9Sb3dzAENvbmNhdABPYmplY3QAZ2V0X0RlZmF1bHQAc2V0X1Rh
-c2tSZXN1bHQAZ2V0X0NvdW50AERhdGFSb3cAZ2V0X0Fzc2VtYmx5AAAAAC8kAFAAcgBvAGoAZQBj
-AHQAOgA6AEMAdQByAHIAZQBuAHQARgBvAGwAZABlAHIAAB9VAHMAZQByADoAOgBGAGkAbABlAE4A
-YQBtAGUAMgAAXVAAcgBvAHYAaQBkAGUAcgA9AE0AaQBjAHIAbwBzAG8AZgB0AC4AQQBDAEUALgBP
-AEwARQBEAEIALgAxADIALgAwADsARABhAHQAYQAgAFMAbwB1AHIAYwBlAD0AAANcAABhOwBFAHgA
-dABlAG4AZABlAGQAIABQAHIAbwBwAGUAcgB0AGkAZQBzAD0AIgBFAHgAYwBlAGwAIAAxADIALgAw
-ADsASABEAFIAPQBOAG8AOwBJAE0ARQBYAD0AMQAiADsAAC9TAEUATABFAEMAVAAgACoAIABGAFIA
-TwBNACAAWwBTAGgAZQBlAHQAMQAkAF0AAAkuAEMAUwBWAAABAAMiAAAFIgAsAABxUwBUAF8ANAAz
-ADQANQA5AGQAMQAyADYANQBiADIANABmAGYAZAA4ADUAYwAwADkAMwAyADEAYQBhADQAOQBjAGQA
-YQA4AC4AUAByAG8AcABlAHIAdABpAGUAcwAuAFIAZQBzAG8AdQByAGMAZQBzAAAAAAAK9nsuBMVN
-QaofGrIYy2H4AAQgAQEIAyAAAQUgAQEREQQgAQEOBSABARFdDQcIDg4SPRJBEkUIDggEIAASbQQg
-ABJxBSABEnUcAyAAHAMgAA4FAAEOHQ4GIAIBDhI9BiABARKAgQUgAQgSQQcABA4ODg4OBSAAEoCN
-BiABEoCRCAQgARwIBSAAEoCVAyAACAQgAQ4ICAABEoClEYCpBSAAEoCtByACAQ4SgK0It3pcVhk0
-4IkIiYRdzYCAzJEEAAAAAAQBAAAAAwYSVQMGElkDBhIQAgYIAwYRFAQAABJVBAAAElkFAAEBElkE
-AAASEAMAAAEECAASVQQIABJZBAgAEhAIAQAIAAAAAAAeAQABAFQCFldyYXBOb25FeGNlcHRpb25U
-aHJvd3MBCAEAAgAAAAAAKAEAI1NUXzQzNDU5ZDEyNjViMjRmZmQ4NWMwOTMyMWFhNDljZGE4AAAF
-AQAAAAAWAQARQ29weXJpZ2h0IEAgIDIwMjAAAEkBABouTkVURnJhbWV3b3JrLFZlcnNpb249djQu
-NQEAVA4URnJhbWV3b3JrRGlzcGxheU5hbWUSLk5FVCBGcmFtZXdvcmsgNC41ALQAAADOyu++AQAA
-AJEAAABsU3lzdGVtLlJlc291cmNlcy5SZXNvdXJjZVJlYWRlciwgbXNjb3JsaWIsIFZlcnNpb249
-NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5
-I1N5c3RlbS5SZXNvdXJjZXMuUnVudGltZVJlc291cmNlU2V0AgAAAAAAAAAAAAAAUEFEUEFEULQA
-AAA0MgAAAAAAAAAAAABOMgAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQDIAAAAAAAAAAAAAAABf
-Q29yRGxsTWFpbgBtc2NvcmVlLmRsbAAAAAAA/yUAIAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+EQRvJgAACtwIbycAAAreRRMIAigQAAAKbygAAAoWclsBAHARCG8pAAAKcn8BAHARCG8qAAAKKCsA
+AAp+LAAAChZvLQAACiYCKBAAAAoXby4AAAreAAIoEAAAChZvLgAACioAAEE0AAACAAAArAAAAIQA
+AAAwAQAADAAAAAAAAAAAAAAAAAAAAEQBAABEAQAARQAAABIAAAEeAigvAAAKKh4CKDAAAAoqrn4B
+AAAELR5ygwEAcNADAAACKDEAAApvMgAACnMzAAAKgAEAAAR+AQAABCoafgIAAAQqHgKAAgAABCoa
+fgMAAAQqHgIoNAAACioucwgAAAaAAwAABCoAAEJTSkIBAAEAAAAAAAwAAAB2NC4wLjMwMzE5AAAA
+AAUAbAAAAMgEAAAjfgAANAUAAOwGAAAjU3RyaW5ncwAAAAAgDAAA+AEAACNVUwAYDgAAEAAAACNH
+VUlEAAAAKA4AANABAAAjQmxvYgAAAAAAAAACAAABVx2iAQkDAAAA+gEzABYAAAEAAAAtAAAABQAA
+AAYAAAAJAAAAAQAAADQAAAACAAAAEAAAAAEAAAACAAAAAwAAAAQAAAABAAAABQAAAAEAAAABAAAA
+AAAgBAEAAAAAAAYAvgKVBQYATQOVBQYACgKCBQ8ACQYAAAYANwKoBAYAoQKoBAYAggKoBAYANAOo
+BAYA3gKoBAYA9wKoBAYATgKoBAYAaQKCAwoAEgPPAwoAYAHPAw4A4QRrAA4AvgBfAAYAQgUuAAYA
+8QRWBAYAXQRWBAYA7QGCBQYAowZWBAYAHgW1BQYADgWTBBIAvQEKBBIAHgIKBBIAlwF+BAYA0gGV
+BQoA+APPAxYASwYBARYAyAABAQYAngNWBA4A5AT7BA4AhgBrAA4AWgVrAA4AXQX7BA4AzwRfAA4A
+zwZfAA4AugRfAA4AfAFfAAYATwUuAAYA0QBWBAoALgXPAwYAKwFWBAYA3QBWBAYA2waoBAAAAAAl
+AAAAAAABAAEAAQAQAHMEAQA5AAEAAQAAABAAvAUYBlUAAQADAAABEABVBhgGaQADAAcAAwEAAHoG
+AABNAAQACgARAGIE0gARAFAB1gARAKIA2gAGBlcA3gBWgGoG4QBWgDAB4QBQIAAAAACGAHkEBgAB
+ACgiAAAAAIYYdQUGAAEAMCIAAAAAgxh1BQYAAQA4IgAAAACTCBoF5QABAGQiAAAAAJMIOAHqAAEA
+ayIAAAAAkwhEAe8AAQBzIgAAAACWCKoG9QACAHoiAAAAAIYYdQUGAAIAgiIAAAAAkRh7BfoAAgAA
+AAEAdQMJAHUFAQARAHUFBgAZAHUFCgApAHUFEAAxAHUFEAA5AHUFEABBAHUFEABJAHUFEABRAHUF
+EABZAHUFEABhAHUFEABpAHUFBgChAHUFBgDJAHUFFQDZAHUFBgBxAHIGKwDhAEcGMADpAE0ENQDx
+AGsDOwCpAJwDPwD5AJwGQwB5AHUFEAABAW4EBgAJAXUFSQARAXUFUACBAHUFBgAZAUgEVwD5AJwG
+XQCJAHUFEACBAJMGZQAhAU0EawApAU0EcgCBAF4GdwA5AcUGfQD5AKUDfQD5AHsDgQBBASEBEABJ
+AbUBBgABAa8BBgDhAIgGhgCRALIAPwCRAJMAPwD5AJwGjAD5AOQGkwBRAWsFlgDhALYGAQBxAHUF
+BgCpAHUFBgBZAe8AnwBZAdcGqACxAHUFrgDRAHUFBgAIABQAyAAIABgAzQApAHMANQEuAAsADQEu
+ABMAFgEuABsANQEuACMAPgEuACsAZwEuADMAZwEuADsAZwEuAEMAPgEuAEsAbQEuAFMAZwEuAFsA
+hAFDAGMAzQBJAHMANQFhAHsAzQBjAGsAzQAbAAMAAQAEAAMAAAAeBf4AAABYAQMBAACuBggBAgAE
+AAMAAgAFAAUAAQAGAAUAAgAHAAcABIAAAAEAAAD6HCNhAAAAAAAAAQAAAAQAAAAAAAAAAAAAALYA
+fQAAAAAADgAAAAAAAAAAAAAAvwCwAwAAAAAEAAAAAAAAAAAAAAC2AF8AAAAAAAQAAAAAAAAAAAAA
+ALYAVgQAAAAADgAAAAAAAAAAAAAAvwA4AAAAAAAAAAAAAQAAAMYFAAAFAAIAAAAAAABTVF80MzQ1
+OWQxMjY1YjI0ZmZkODVjMDkzMjFhYTQ5Y2RhOAA8TW9kdWxlPgBTeXN0ZW0uSU8ATWljcm9zb2Z0
+LlNxbFNlcnZlci5NYW5hZ2VkRFRTAHZhbHVlX18AU3lzdGVtLkRhdGEAU3lzdGVtLkRhdGEuT2xl
+RGIAbXNjb3JsaWIAT2xlRGJDb21tYW5kAGdldF9TdGFja1RyYWNlAGRlZmF1bHRJbnN0YW5jZQBn
+ZXRfTWVzc2FnZQBEYXRhVGFibGUAVmFyaWFibGUASURpc3Bvc2FibGUAUnVudGltZVR5cGVIYW5k
+bGUAR2V0VHlwZUZyb21IYW5kbGUATWljcm9zb2Z0LlNxbFNlcnZlci5EdHMuUnVudGltZQBXcml0
+ZUxpbmUAVHlwZQBGYWlsdXJlAGdldF9DdWx0dXJlAHNldF9DdWx0dXJlAHJlc291cmNlQ3VsdHVy
+ZQBWU1RBUlRTY3JpcHRPYmplY3RNb2RlbEJhc2UASW50ZXJuYWxEYXRhQ29sbGVjdGlvbkJhc2UA
+QXBwbGljYXRpb25TZXR0aW5nc0Jhc2UAQ2xvc2UARGlzcG9zZQBFZGl0b3JCcm93c2FibGVTdGF0
+ZQBDb21waWxlckdlbmVyYXRlZEF0dHJpYnV0ZQBEZWJ1Z2dlck5vblVzZXJDb2RlQXR0cmlidXRl
+AERlYnVnZ2FibGVBdHRyaWJ1dGUARWRpdG9yQnJvd3NhYmxlQXR0cmlidXRlAEFzc2VtYmx5VGl0
+bGVBdHRyaWJ1dGUAQXNzZW1ibHlUcmFkZW1hcmtBdHRyaWJ1dGUAVGFyZ2V0RnJhbWV3b3JrQXR0
+cmlidXRlAEFzc2VtYmx5Q29uZmlndXJhdGlvbkF0dHJpYnV0ZQBBc3NlbWJseURlc2NyaXB0aW9u
+QXR0cmlidXRlAENvbXBpbGF0aW9uUmVsYXhhdGlvbnNBdHRyaWJ1dGUAQXNzZW1ibHlQcm9kdWN0
+QXR0cmlidXRlAEFzc2VtYmx5Q29weXJpZ2h0QXR0cmlidXRlAFNTSVNTY3JpcHRUYXNrRW50cnlQ
+b2ludEF0dHJpYnV0ZQBBc3NlbWJseUNvbXBhbnlBdHRyaWJ1dGUAUnVudGltZUNvbXBhdGliaWxp
+dHlBdHRyaWJ1dGUAZ2V0X1ZhbHVlAHZhbHVlAFJlbW92ZQBTeXN0ZW0uUnVudGltZS5WZXJzaW9u
+aW5nAFRvU3RyaW5nAGdldF9MZW5ndGgATWljcm9zb2Z0LlNxbFNlcnZlci5TY3JpcHRUYXNrAE1p
+Y3Jvc29mdC5TcWxTZXJ2ZXIuRHRzLlRhc2tzLlNjcmlwdFRhc2sAU2NyaXB0T2JqZWN0TW9kZWwA
+U3lzdGVtLkNvbXBvbmVudE1vZGVsAFNUXzQzNDU5ZDEyNjViMjRmZmQ4NWMwOTMyMWFhNDljZGE4
+LmRsbABGaWxsAGdldF9JdGVtAFN5c3RlbQBFbnVtAHJlc291cmNlTWFuAE9wZW4AU2NyaXB0TWFp
+bgBTeXN0ZW0uQ29uZmlndXJhdGlvbgBTeXN0ZW0uR2xvYmFsaXphdGlvbgBTeXN0ZW0uUmVmbGVj
+dGlvbgBEYXRhQ29sdW1uQ29sbGVjdGlvbgBEYXRhUm93Q29sbGVjdGlvbgBPbGVEYkNvbm5lY3Rp
+b24ARXhjZXB0aW9uAFN5c3RlbS5EYXRhLkNvbW1vbgBDdWx0dXJlSW5mbwBnZXRfUmVzb3VyY2VN
+YW5hZ2VyAEV2ZW50c09iamVjdFdyYXBwZXIAU3RyZWFtV3JpdGVyAFRleHRXcml0ZXIAT2xlRGJE
+YXRhQWRhcHRlcgBGaXJlRXJyb3IALmN0b3IALmNjdG9yAFN5c3RlbS5EaWFnbm9zdGljcwBTeXN0
+ZW0uUnVudGltZS5Db21waWxlclNlcnZpY2VzAFN5c3RlbS5SZXNvdXJjZXMAU1RfNDM0NTlkMTI2
+NWIyNGZmZDg1YzA5MzIxYWE0OWNkYTguUHJvcGVydGllcy5SZXNvdXJjZXMucmVzb3VyY2VzAERl
+YnVnZ2luZ01vZGVzAFNUXzQzNDU5ZDEyNjViMjRmZmQ4NWMwOTMyMWFhNDljZGE4LlByb3BlcnRp
+ZXMAZ2V0X1ZhcmlhYmxlcwBTZXR0aW5ncwBnZXRfQ29sdW1ucwBTdWNjZXNzAGdldF9EdHMAU2Ny
+aXB0UmVzdWx0cwBnZXRfRXZlbnRzAGdldF9Sb3dzAENvbmNhdABPYmplY3QAZ2V0X0RlZmF1bHQA
+c2V0X1Rhc2tSZXN1bHQAZ2V0X0NvdW50AERhdGFSb3cAZ2V0X0Fzc2VtYmx5AEVtcHR5AAAAAC8k
+AFAAcgBvAGoAZQBjAHQAOgA6AEMAdQByAHIAZQBuAHQARgBvAGwAZABlAHIAAB9VAHMAZQByADoA
+OgBGAGkAbABlAE4AYQBtAGUAMgAAXVAAcgBvAHYAaQBkAGUAcgA9AE0AaQBjAHIAbwBzAG8AZgB0
+AC4AQQBDAEUALgBPAEwARQBEAEIALgAxADIALgAwADsARABhAHQAYQAgAFMAbwB1AHIAYwBlAD0A
+AANcAABhOwBFAHgAdABlAG4AZABlAGQAIABQAHIAbwBwAGUAcgB0AGkAZQBzAD0AIgBFAHgAYwBl
+AGwAIAAxADIALgAwADsASABEAFIAPQBOAG8AOwBJAE0ARQBYAD0AMQAiADsAAC9TAEUATABFAEMA
+VAAgACoAIABGAFIATwBNACAAWwBTAGgAZQBlAHQAMQAkAF0AAAkuAEMAUwBWAAABAAMiAAAFIgAs
+AAAjUwBjAHIAaQBwAHQAIABUAGEAcwBrACAARQByAHIAbwByAAADDQAAcVMAVABfADQAMwA0ADUA
+OQBkADEAMgA2ADUAYgAyADQAZgBmAGQAOAA1AGMAMAA5ADMAMgAxAGEAYQA0ADkAYwBkAGEAOAAu
+AFAAcgBvAHAAZQByAHQAaQBlAHMALgBSAGUAcwBvAHUAcgBjAGUAcwAAAAAAwOo9itQN90a1KWKU
+NKwUTQAEIAEBCAMgAAEFIAEBEREEIAEBDgUgAQERYQ8HCQ4OEj0SQRJFCA4IEkkEIAAScQQgABJ1
+BSABEnkcAyAAHAMgAA4FAAEOHQ4GIAIBDhI9BiABARKAhQUgAQgSQQcABA4ODg4OBSAAEoCRBiAB
+EoCVCAQgARwIBSAAEoCZAyAACAQgAQ4IBSAAEoCpBgADDg4ODgIGDgggBQIIDg4OCAgAARKArRGA
+sQUgABKAtQcgAgEOEoC1CLd6XFYZNOCJCImEXc2AgMyRBAAAAAAEAQAAAAMGElkDBhJdAwYSEAIG
+CAMGERQEAAASWQQAABJdBQABARJdBAAAEhADAAABBAgAElkECAASXQQIABIQCAEACAAAAAAAHgEA
+AQBUAhZXcmFwTm9uRXhjZXB0aW9uVGhyb3dzAQgBAAIAAAAAACgBACNTVF80MzQ1OWQxMjY1YjI0
+ZmZkODVjMDkzMjFhYTQ5Y2RhOAAABQEAAAAAFgEAEUNvcHlyaWdodCBAICAyMDIwAABJAQAaLk5F
+VEZyYW1ld29yayxWZXJzaW9uPXY0LjUBAFQOFEZyYW1ld29ya0Rpc3BsYXlOYW1lEi5ORVQgRnJh
+bWV3b3JrIDQuNQAAtAAAAM7K774BAAAAkQAAAGxTeXN0ZW0uUmVzb3VyY2VzLlJlc291cmNlUmVh
+ZGVyLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tl
+eVRva2VuPWI3N2E1YzU2MTkzNGUwODkjU3lzdGVtLlJlc291cmNlcy5SdW50aW1lUmVzb3VyY2VT
+ZXQCAAAAAAAAAAAAAABQQURQQURQtAAAAGgzAAAAAAAAAAAAAIIzAAAAIAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAB0MwAAAAAAAAAAAAAAAF9Db3JEbGxNYWluAG1zY29yZWUuZGxsAAAAAAD/JQAgABAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAQAQAAAAGAAAgAAAAAAAAAAAAAAAAAAAAQABAAAAMAAAgAAAAAAAAAAAAAAAAAAAAQAAAAAA
 SAAAAFhAAAAaBAAAAAAAAAAAAAAaBDQAAABWAFMAXwBWAEUAUgBTAEkATwBOAF8ASQBOAEYATwAA
-AAAAvQTv/gAAAQAAAAEABFb6HAAAAQAEVvocPwAAAAAAAAAEAAAAAgAAAAAAAAAAAAAAAAAAAEQA
+AAAAvQTv/gAAAQAAAAEAI2H6HAAAAQAjYfocPwAAAAAAAAAEAAAAAgAAAAAAAAAAAAAAAAAAAEQA
 AAABAFYAYQByAEYAaQBsAGUASQBuAGYAbwAAAAAAJAAEAAAAVAByAGEAbgBzAGwAYQB0AGkAbwBu
 AAAAAAAAALAEegMAAAEAUwB0AHIAaQBuAGcARgBpAGwAZQBJAG4AZgBvAAAAVgMAAAEAMAAwADAA
 MAAwADQAYgAwAAAAGgABAAEAQwBvAG0AbQBlAG4AdABzAAAAAAAAACIAAQABAEMAbwBtAHAAYQBu
 AHkATgBhAG0AZQAAAAAAAAAAAHAAJAABAEYAaQBsAGUARABlAHMAYwByAGkAcAB0AGkAbwBuAAAA
 AABTAFQAXwA0ADMANAA1ADkAZAAxADIANgA1AGIAMgA0AGYAZgBkADgANQBjADAAOQAzADIAMQBh
 AGEANAA5AGMAZABhADgAAAA+AA8AAQBGAGkAbABlAFYAZQByAHMAaQBvAG4AAAAAADEALgAwAC4A
-NwA0ADEAOAAuADIAMgAwADIAMAAAAAAAcAAoAAEASQBuAHQAZQByAG4AYQBsAE4AYQBtAGUAAABT
+NwA0ADEAOAAuADIANAA4ADYANwAAAAAAcAAoAAEASQBuAHQAZQByAG4AYQBsAE4AYQBtAGUAAABT
 AFQAXwA0ADMANAA1ADkAZAAxADIANgA1AGIAMgA0AGYAZgBkADgANQBjADAAOQAzADIAMQBhAGEA
 NAA5AGMAZABhADgALgBkAGwAbAAAAEgAEgABAEwAZQBnAGEAbABDAG8AcAB5AHIAaQBnAGgAdAAA
 AEMAbwBwAHkAcgBpAGcAaAB0ACAAQAAgACAAMgAwADIAMAAAACoAAQABAEwAZQBnAGEAbABUAHIA
@@ -1230,15 +1431,15 @@ AG0AZQAAAFMAVABfADQAMwA0ADUAOQBkADEAMgA2ADUAYgAyADQAZgBmAGQAOAA1AGMAMAA5ADMA
 MgAxAGEAYQA0ADkAYwBkAGEAOAAuAGQAbABsAAAAaAAkAAEAUAByAG8AZAB1AGMAdABOAGEAbQBl
 AAAAAABTAFQAXwA0ADMANAA1ADkAZAAxADIANgA1AGIAMgA0AGYAZgBkADgANQBjADAAOQAzADIA
 MQBhAGEANAA5AGMAZABhADgAAABCAA8AAQBQAHIAbwBkAHUAYwB0AFYAZQByAHMAaQBvAG4AAAAx
-AC4AMAAuADcANAAxADgALgAyADIAMAAyADAAAAAAAEYADwABAEEAcwBzAGUAbQBiAGwAeQAgAFYA
-ZQByAHMAaQBvAG4AAAAxAC4AMAAuADcANAAxADgALgAyADIAMAAyADAAAAAAAAAAAAAAAAAAAAAA
+AC4AMAAuADcANAAxADgALgAyADQAOAA2ADcAAAAAAEYADwABAEEAcwBzAGUAbQBiAGwAeQAgAFYA
+ZQByAHMAaQBvAG4AAAAxAC4AMAAuADcANAAxADgALgAyADQAOAA2ADcAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAMAAAAYDIAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAMAAAAlDMAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1302,7 +1503,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           DTS:EvalOp="3"
           DTS:Expression="REVERSE(UPPER(SUBSTRING(REVERSE(@[User::FileName2]),1,5)))!=&quot;.XLSX&quot;"
           DTS:From="Package\For Each Queued File\Move File To Current folder"
-          DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint 5"
           DTS:To="Package\For Each Queued File\DynamicLoadDataToDB" />
         <DTS:PrecedenceConstraint
@@ -1310,7 +1510,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           DTS:CreationName=""
           DTS:DTSID="{4304025F-858B-453B-A4F3-1638EF063B3F}"
           DTS:From="Package\For Each Queued File\Save Excel as Text"
-          DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint 6"
           DTS:To="Package\For Each Queued File\DynamicLoadDataToDB" />
         <DTS:PrecedenceConstraint
@@ -1345,6 +1544,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="184,42"
+          Id="Package\For Each Queued File\Add ETLHistory record"
+          TopLeft="37,145" />
+        <NodeLayout
+          Size="190,42"
+          Id="Package\For Each Queued File\DynamicLoadDataToDB"
+          TopLeft="150,332" />
+        <NodeLayout
           Size="151,42"
           Id="Package\For Each Queued File\Get ETL Details"
           TopLeft="48,74" />
@@ -1352,6 +1559,22 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           Size="196,42"
           Id="Package\For Each Queued File\Get ETLID from filename"
           TopLeft="21,6" />
+        <NodeLayout
+          Size="217,42"
+          Id="Package\For Each Queued File\Move Excel File to Completed"
+          TopLeft="492,218" />
+        <NodeLayout
+          Size="190,42"
+          Id="Package\For Each Queued File\Move File to Completed"
+          TopLeft="429,332" />
+        <NodeLayout
+          Size="207,42"
+          Id="Package\For Each Queued File\Move File To Current folder"
+          TopLeft="33,218" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\For Each Queued File\Save Excel as Text"
+          TopLeft="294,219" />
         <EdgeLayout
           Id="Package\For Each Queued File.PrecedenceConstraints[Constraint]"
           TopLeft="121.25,48">
@@ -1374,14 +1597,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="207,42"
-          Id="Package\For Each Queued File\Move File To Current folder"
-          TopLeft="33,218" />
-        <NodeLayout
-          Size="184,42"
-          Id="Package\For Each Queued File\Add ETLHistory record"
-          TopLeft="37,145" />
         <EdgeLayout
           Id="Package\For Each Queued File.PrecedenceConstraints[Constraint 1]"
           TopLeft="126.25,116">
@@ -1426,10 +1641,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="167,42"
-          Id="Package\For Each Queued File\Save Excel as Text"
-          TopLeft="294,219" />
         <EdgeLayout
           Id="Package\For Each Queued File.PrecedenceConstraints[Constraint 3]"
           TopLeft="240,239.5">
@@ -1454,10 +1665,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="217,42"
-          Id="Package\For Each Queued File\Move Excel File to Completed"
-          TopLeft="492,218" />
         <EdgeLayout
           Id="Package\For Each Queued File.PrecedenceConstraints[Constraint 4]"
           TopLeft="461,239.5">
@@ -1480,43 +1687,39 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="190,42"
-          Id="Package\For Each Queued File\DynamicLoadDataToDB"
-          TopLeft="150,336" />
         <EdgeLayout
           Id="Package\For Each Queued File.PrecedenceConstraints[Constraint 5]"
           TopLeft="136.5,260">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="78.1666666666667,76"
+              EndConnector="78.1666666666667,72"
               Start="0,0"
-              End="78.1666666666667,68.5">
+              End="78.1666666666667,64.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,41.2192066805846" />
+                    End="0,38.839248434238" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,41.2192066805846"
-                    Point2="0,45.2192066805846"
-                    Point3="4,45.2192066805846" />
+                    Point1="0,38.839248434238"
+                    Point2="0,42.839248434238"
+                    Point3="4,42.839248434238" />
                   <mssgle:LineSegment
-                    End="74.1666666666667,45.2192066805846" />
+                    End="74.1666666666667,42.839248434238" />
                   <mssgle:CubicBezierSegment
-                    Point1="74.1666666666667,45.2192066805846"
-                    Point2="78.1666666666667,45.2192066805846"
-                    Point3="78.1666666666667,49.2192066805846" />
+                    Point1="74.1666666666667,42.839248434238"
+                    Point2="78.1666666666667,42.839248434238"
+                    Point3="78.1666666666667,46.839248434238" />
                   <mssgle:LineSegment
-                    End="78.1666666666667,68.5" />
+                    End="78.1666666666667,64.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="31.0833333333333,50.2192066805846,16,16"
+              BoundingBox="31.0833333333333,47.839248434238,16,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -1526,26 +1729,26 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-102.166666666667,75"
+              EndConnector="-102.166666666667,71"
               Start="0,0"
-              End="-102.166666666667,67.5">
+              End="-102.166666666667,63.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,40.6242171189979" />
+                    End="0,38.2442588726514" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,40.6242171189979"
-                    Point2="0,44.6242171189979"
-                    Point3="-4,44.6242171189979" />
+                    Point1="0,38.2442588726514"
+                    Point2="0,42.2442588726514"
+                    Point3="-4,42.2442588726514" />
                   <mssgle:LineSegment
-                    End="-98.1666666666667,44.6242171189979" />
+                    End="-98.1666666666667,42.2442588726514" />
                   <mssgle:CubicBezierSegment
-                    Point1="-98.1666666666667,44.6242171189979"
-                    Point2="-102.166666666667,44.6242171189979"
-                    Point3="-102.166666666667,48.6242171189979" />
+                    Point1="-98.1666666666667,42.2442588726514"
+                    Point2="-102.166666666667,42.2442588726514"
+                    Point3="-102.166666666667,46.2442588726514" />
                   <mssgle:LineSegment
-                    End="-102.166666666667,67.5" />
+                    End="-102.166666666667,63.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1554,13 +1757,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="190,42"
-          Id="Package\For Each Queued File\Move File to Completed"
-          TopLeft="429,332" />
         <EdgeLayout
           Id="Package\For Each Queued File.PrecedenceConstraints[Constraint 7]"
-          TopLeft="340,355">
+          TopLeft="340,353">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
