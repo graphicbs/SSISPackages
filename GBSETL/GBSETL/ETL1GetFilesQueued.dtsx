@@ -12,8 +12,8 @@
   DTS:ObjectName="ETL1GetFilesQueued"
   DTS:PackageType="5"
   DTS:ProtectionLevel="2"
-  DTS:VersionBuild="48"
-  DTS:VersionGUID="{535777C0-C74F-41CC-AA8B-1C1CAA96AAF3}">
+  DTS:VersionBuild="55"
+  DTS:VersionGUID="{4E8C94D5-5FAC-436A-8DAA-FA06914B63FD}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:LogProviders>
@@ -95,7 +95,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="QueueFileName">
       <DTS:VariableValue
-        DTS:DataType="8">C:\GBSAutomation\ETL\ETL1Queue\0~myfile.xlsx</DTS:VariableValue>
+        DTS:DataType="8">F:\GBSAutomation\ETL\ETL1Queue\0~myfile.xlsx</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -111,12 +111,12 @@
       DTS:CreationName=""
       DTS:DTSID="{62C9C216-695F-4125-819E-9E2043736796}"
       DTS:EvaluateAsExpression="True"
-      DTS:Expression="@[User::SourceDirectoryFull] + &quot;\\&quot; +  @[User::SourceFileName]"
+      DTS:Expression="@[User::SourceDirectoryFull] +   @[User::SourceFileName]"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="SouceFileNameFull">
       <DTS:VariableValue
-        DTS:DataType="8">\\sbs\Company\GBS Documents\AutomationFileDrop\\myfile.xlsx</DTS:VariableValue>
+        DTS:DataType="8">F:\GBSAutomation\BatchOutput\myfile.xlsx</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -125,18 +125,16 @@
       DTS:Namespace="User"
       DTS:ObjectName="SourceDirectory">
       <DTS:VariableValue
-        DTS:DataType="8">Company\GBS Documents\AutomationFileDrop\</DTS:VariableValue>
+        DTS:DataType="8">F:\GBSAutomation\BatchOutput\</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{9F966DEA-1108-47E8-8C4D-AB123705B3EB}"
-      DTS:EvaluateAsExpression="True"
-      DTS:Expression="&quot;\\\\&quot; + @[User::SourceServer]  + &quot;\\&quot; +  @[User::SourceDirectory]"
+      DTS:DTSID="{1DF48A8F-D480-4AAE-96B2-DE6A8D73E892}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="SourceDirectoryFull">
       <DTS:VariableValue
-        DTS:DataType="8">\\sbs\Company\GBS Documents\AutomationFileDrop\</DTS:VariableValue>
+        DTS:DataType="8">F:\GBSAutomation\BatchOutput\</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -163,7 +161,8 @@
       DTS:Namespace="User"
       DTS:ObjectName="SourceServer">
       <DTS:VariableValue
-        DTS:DataType="8">sbs</DTS:VariableValue>
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -699,7 +698,7 @@
             <DTS:ObjectData>
               <ForEachFileEnumeratorProperties>
                 <FEFEProperty
-                  Folder="\\sbs\Company\GBS Documents\AutomationFileDrop\" />
+                  Folder="F:\GBSAutomation\BatchOutput\" />
                 <FEFEProperty
                   FileSpec="myfile*.xlsx" />
                 <FEFEProperty
@@ -1487,6 +1486,9 @@
               <SQLTask:ResultBinding
                 SQLTask:ResultName="TableName"
                 SQLTask:DtsVariableName="User::TableName" />
+              <SQLTask:ResultBinding
+                SQLTask:ResultName="SourceDirectoryFull"
+                SQLTask:DtsVariableName="User::SourceDirectoryFull" />
               <SQLTask:ParameterBinding
                 SQLTask:ParameterName="@ETLID"
                 SQLTask:DtsVariableName="User::ETLID"
@@ -1808,8 +1810,8 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="240,107"
-          Size="240,150"
+          PanelSize="422,104"
+          Size="422,147"
           Id="Package\ForEach ETL\Find Matching Files at source"
           TopLeft="20,91" />
         <NodeLayout
@@ -1822,9 +1824,9 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="41.5,26"
+              EndConnector="132.5,26"
               Start="0,0"
-              End="41.5,18.5">
+              End="132.5,18.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -1835,13 +1837,13 @@
                     Point2="0,13"
                     Point3="4,13" />
                   <mssgle:LineSegment
-                    End="37.5,13" />
+                    End="128.5,13" />
                   <mssgle:CubicBezierSegment
-                    Point1="37.5,13"
-                    Point2="41.5,13"
-                    Point3="41.5,17" />
+                    Point1="128.5,13"
+                    Point2="132.5,13"
+                    Point3="132.5,17" />
                   <mssgle:LineSegment
-                    End="41.5,18.5" />
+                    End="132.5,18.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

@@ -37,7 +37,7 @@
       <SSIS:Property
         SSIS:Name="Sensitive">0</SSIS:Property>
       <SSIS:Property
-        SSIS:Name="Value">C:\GBSAutomation\ETL\ETL1Queue</SSIS:Property>
+        SSIS:Name="Value">F:\GBSAutomation\ETL\ETL1Queue</SSIS:Property>
       <SSIS:Property
         SSIS:Name="DataType">18</SSIS:Property>
     </SSIS:Properties>
@@ -58,7 +58,7 @@
       <SSIS:Property
         SSIS:Name="Sensitive">0</SSIS:Property>
       <SSIS:Property
-        SSIS:Name="Value">C:\GBSAutomation\ETL\ETL2Current</SSIS:Property>
+        SSIS:Name="Value">F:\GBSAutomation\ETL\ETL2Current</SSIS:Property>
       <SSIS:Property
         SSIS:Name="DataType">18</SSIS:Property>
     </SSIS:Properties>
@@ -79,7 +79,7 @@
       <SSIS:Property
         SSIS:Name="Sensitive">0</SSIS:Property>
       <SSIS:Property
-        SSIS:Name="Value">C:\GBSAutomation\ETL\ETL9Completed</SSIS:Property>
+        SSIS:Name="Value">F:\GBSAutomation\ETL\ETL9Completed</SSIS:Property>
       <SSIS:Property
         SSIS:Name="DataType">18</SSIS:Property>
     </SSIS:Properties>
@@ -100,7 +100,7 @@
       <SSIS:Property
         SSIS:Name="Sensitive">0</SSIS:Property>
       <SSIS:Property
-        SSIS:Name="Value">C:\GBSAutomation\ETL\ETL0Error</SSIS:Property>
+        SSIS:Name="Value">F:\GBSAutomation\ETL\ETL0Error</SSIS:Property>
       <SSIS:Property
         SSIS:Name="DataType">18</SSIS:Property>
     </SSIS:Properties>
@@ -123,9 +123,9 @@
       <SSIS:Property
         SSIS:Name="Value"
         SSIS:Sensitive="1"
-        SSIS:Salt="pZPHYgfWl9s="
-        SSIS:IV="dQmTV8MydICIzqRbVwWOUA=="
-        SSIS:Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc">Zi9OkrNaYJ6azD3o8U+u9cFh7SR7ElKUtOuwbvtyVHBy5aUQ043lJZQhjRVEwRTYOfkn1QqIGEK+mYYLzlHjnrKJQh7k+h9WRtAIKvOySsVJMimWQSlGxVdK5NU0WzIskTYRpPLhqALVnw0j1JHPwzq/jBqIpOdqnvauGiI3NH39G1VP3Nw3PXS6/3CtucjP7H+eEsv6/djYTuENuMGAQg==</SSIS:Property>
+        SSIS:Salt="x99WYaroAGs="
+        SSIS:IV="RkkEkhX4J33tNs9q0FzX0Q=="
+        SSIS:Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc">qVs5tvJc2WID2zppkMPStVhUb4riN+smbpGj7EGInCfdLffMWNccd8oLErj4GHCIHvqv64dMGufgsugpQ0uibdW1/hvfszJTeBGaQvnBEXL+rFOJzzwbyP46W/5MpGmQK723cGEBBw2IbjD7TuOTQzI3NhUTfaCUwmwhzbSwoAQpBFOmfCY9F1rhHd5cQVUQWT95mgdkQOpol019gfjEWA==</SSIS:Property>
       <SSIS:Property
         SSIS:Name="DataType">18</SSIS:Property>
     </SSIS:Properties>
